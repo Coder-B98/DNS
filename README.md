@@ -32,25 +32,56 @@ This tutorial outlines the basics of Domanin Naming System (DNS) Using ano on-pr
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/bSj60xq.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Log into the client VM and use the command line to ping mainframe and notice that it fails
+<br />
+
+<p>
+<img src="https://i.imgur.com/KqoamI8.png"/>
+</p>
+<p>
+From the Domain Controller go to tools and then the DNS to open the DNS manager. Open forward lookup zones and right click the center box to create a new A record called mainframe that points to the Domain Controller's private IP address.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/lP1oTc7.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+You can now ping mainframe and it will work as shown in the above screenshot.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/wv35OZ4.png"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+After you've pinged the DNS and notice that it's still to the Domain Controller's private IP address; Open command line as an administrator and use command ipconfig/flushdns and then ping mainframe again to make the Client access the new DNS.
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/Julbyug.png"/>
+</p>
+<p>
+From the DNS manager right click again and create a CNAME or ALias that points to wwww.google.com
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Julbyug.png"/>
+</p>
+<p>
+From the DNS manager right click again and create a CNAME or ALias that points to wwww.google.com
+</p>
+<br /><p>
+<img src="https://i.imgur.com/kKSiQve.png"/>
+</p>
+<p>
+Use the command nslookup search and it should search the DNS for www.google.com as shown in the above screenshot. This concludes our DNS demonstration. 
+</p>
+<br />
+
+
