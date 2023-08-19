@@ -12,7 +12,7 @@ This tutorial outlines the basics of Domanin Naming System (DNS) Using ano on-pr
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
-- PowerShell
+- Command Line
 
 <h2>Operating Systems Used </h2>
 
@@ -21,10 +21,13 @@ This tutorial outlines the basics of Domanin Naming System (DNS) Using ano on-pr
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Ping Mainframe from the client and notice it fails
+- Create a DNS A-record for mainframe and set it to the Domain Controller's private IP address
+- Change the mainframe to 8.8.8.8
+- ping the mainframe flush the DNS and then ping it again.
+- Create a CNAME record search and have it point to www.google.com
+- Use the nslookup command with search to test the CNAME record you made.
+
 
 <h2>Deployment and Configuration Steps</h2>
 
